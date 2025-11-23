@@ -38,7 +38,8 @@
 | 变量名                  | 必填 | 默认值    | 描述与示例 |
 |-------------------------|------|-----------|------------|
 | `DYNV6_DOMAIN`         | 是   | -         | 您在 dynv6 上设置的完整域名。例如：`huiyun.v6.rocks` |
-| `DYNV6_TOKEN`          | 是   | -         | 您的 dynv6 API Token（在网站上的 APIs 或 HTTP Tokens 页面获取） |
+| `DYNV6_TOKEN`          | 是   | -         | 您的 dynv6 API Token（在网站上的域名 Instructions 页面获取，ddclient中为password='McNXXX',Fritz!OS (German)中为Benutzername)
+McNXXXX） |
 | `DYNV6_IPV4`           | 否   | `true`    | 是否启用 IPv4 地址更新。设为 `false` 可禁用。 |
 | `DYNV6_IPV6`           | 否   | `true`    | 是否启用 IPv6 地址更新。设为 `false` 可禁用。 |
 | `DYNV6_IP_SOURCE`      | 否   | `public_api` | IP 地址获取方式。可选：`public_api`(推荐) 或 `network_interface` |
@@ -66,7 +67,7 @@
    - **任务名称**：填写一个易于识别的名称，如 `更新Dynv6 DDNS`。  
    - **命令**：选择 `task`，命令内容填写：  
      ```bash
-     python3 /ql/scripts/dynv6_ddns.py
+     task dynv6_ddns.py
      ```  
      （请根据您的脚本实际存放路径调整）  
    - **定时规则**：设置一个 Cron 表达式。例如：  
